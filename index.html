@@ -1,9 +1,25 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="index.css">
 <html>
+	<head>
+		<script>
+			function test()
+			{
+				window.alert("AAAAAAAAA");
+			}
+		</script>
+	</head>
+	
 	<body>
 		<div id="Wrapper">
-			<div id="TopBar">
+			<div id="TopBar" class="colorB">
+				<ul>
+					<li><a href="#About">ABOUT ME</a></li>
+					<li><a href="#Proficiencies">PROFICIENCIES</a></li>
+					<li><a href="#Projects">PROJECTS</a></li>
+					<li><a href="#">CV</a></li>
+					<li><a href="#">CONTACT</a></li>
+				</ul>
 			</div>
 			<div id="WelcomeHeader">
 				<div id="WelcomeText">
@@ -12,26 +28,26 @@
 				</div>
 			</div>
 
-			<div class="row colorA">
+			<div id="Highlight" class="row colorA">
 				<h2 class="centerTitle">Hightlighted project</h2>
 				<div class="rowContent">
 					<div class="split_2">
-						<h2>Puppeteer - Uni</h2>
+						<h2>Puppeteer</h2>
 						<h3>Developer</h3>
 						<p>
 							A 1v4 party game where 4 play as puppets navigating a maze controlled by the 1 puppeteer, who can move around rooms, place traps and spawn enemies to stop the puppets from escaping.
 						</p>
 						<p>
-							I worked mainly on AI and pathfinding, along with making tools and implementing assets made by our artists (UI, animation, shaders).
+							Things I worked on: AI, pathfinding, tools, asset implementation (UI, animation, shaders).
 						</p>
 					</div>
 					<div class="split_2">
-						<img src="./img/TEST.JPG">
+						<img src="./img/Screenshot_LastFarewell_TEMP.jpg">
 					</div>
 				</div>
 			</div>
 
-			<div class="row colorB">
+			<div id="About" class="row colorB">
 				<div class="rowContent">
 					<div class="split_2">
 						<img src="./img/TEST.JPG" alt="Picture of me">
@@ -43,11 +59,11 @@
 				</div>
 			</div>
 
-			<div class="row colorA">
+			<div id="Proficiencies" class="row colorA">
 				<h2 class="centerTitle">Proficiencies</h2>
 				<div class="rowContent, thinRow">
 					<div class="split_3">
-						<h3 class ="centerTitle">Languages</h3>
+						<h4 class ="centerTitle">Languages</h4>
 						<ul>
 							<li>C++</li>
 							<li>C#</li>
@@ -56,22 +72,23 @@
 						</ul>
 					</div>
 					<div class="split_3">
-						<h3 class ="centerTitle">Software</h3>
+						<h4 class ="centerTitle">Software</h4>
 						<li>Unity</li>
 						<li>Unreal Engine</li>
+						<li>Blender</li>
 					</div>
 					<div class="split_3">
-						<h3 class ="centerTitle">Soft skills</h3>
+						<h4 class ="centerTitle">Soft skills</h4>
 						
 					</div>
 				</div>
 			</div>
 
-			<div class="row colorB">
-				<h2 class="centerTitle">Professional projects</h2>
+			<div id="Projects" class="row colorB">
+				<h2 class="centerTitle">Projects I've worked on</h2>
 				<div class="rowContent">
 					<div class="split_2">
-						<div class="projectBox colorA">
+						<div class="projectBox colorA" onclick="test()">
 							<h3>Sparks - North Kingdom</h3>
 							<h4>Designer | Developer</h4>
 							<img src="./img/Screenshot_Sparks.png" alt="Sparks gameplay screenshot">
@@ -84,23 +101,23 @@
 							<img src="./img/Screenshot_LastFarewell_TEMP.jpg">
 						</div>
 					</div>
+					<div class="split_2">
+						<div class="projectBox colorA" onclick="test()">
+							<h3>Sparks - North Kingdom</h3>
+							<h4>Designer | Developer</h4>
+							<img src="./img/Screenshot_Sparks.png" alt="Sparks gameplay screenshot">
+						</div>
+					</div>
+					<div class="split_2">
+						<div class="projectBox colorA" onclick="test()">
+							<h3>Sparks - North Kingdom</h3>
+							<h4>Designer | Developer</h4>
+							<img src="./img/Screenshot_Sparks.png" alt="Sparks gameplay screenshot">
+						</div>
+					</div>
 				</div>
 			</div>
 
-			<div class="row colorA">
-				<h2 class="centerTitle">Other projects</h2>
-				<div class="rowContent">
-					<div class="split_3">
-
-					</div>
-					<div class="split_3">
-						
-					</div>
-					<div class="split_3">
-						
-					</div>
-				</div>
-			</div>
 			<!--
 			<div class="row">
 				<div class="rowContent">
