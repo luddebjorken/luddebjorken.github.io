@@ -1,0 +1,155 @@
+body
+{
+    background-color: #000000;
+    color: white;
+    font-family: 'Helvetica';
+    margin: 0;
+    padding: 0;
+}
+
+img
+{
+    width: 100%;
+}
+
+h1
+{
+    font-size: 3rem;
+}
+
+h2
+{
+    margin: 0px;
+    font-size: 2.5rem;
+}
+
+p, li
+{
+    font-size: 1.5rem;
+}
+
+#Wrapper
+{
+    margin: auto;
+}
+
+#TopBar
+{
+    width: 100%;
+    height: 50px;
+    background-color:red;
+}
+
+#WelcomeHeader
+{
+    background-image: url("./img/TEST.JPG");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 800px;
+    display: block;
+}
+
+#WelcomeText
+{
+    position: absolute;
+    top: 20%;
+    left: 8%;
+    width: fit-content;
+}
+
+.colorA
+{
+    background-color: #141414;
+}
+
+.colorB
+{
+    background-color: #1d1d1d;
+}
+
+.row
+{
+    padding: 30px 0;
+}
+
+.rowContent
+{
+    margin: auto;
+    padding: 10px 0 50px;
+    max-width: 1444px;
+    display: flex;
+}
+.thinRow
+{
+    margin: auto;
+    padding: 10px 0 50px;
+    max-width: 1000px;
+    display: flex;
+}
+
+.centerTitle
+{
+    text-align: center;
+    margin: 0 auto 20px;
+    padding: 0 20px;
+}
+
+
+.split_2
+{
+    flex: 50%;
+    padding: 0 5%;
+}
+
+.split_3
+{
+    flex: 33.333333%;
+}
+
+.split_4
+{
+    flex: 25%;
+    padding-top: 33.333333%;
+}
+
+@media (max-width: 960px) 
+{
+    .rowContent
+    {
+        display: block;
+    }
+}
+
+
+.projectBox
+{
+    padding-bottom: 0;
+    transition: transform .2s;
+}
+
+.projectBox:hover
+{
+    transform: scale(1.03);
+}
+
+.projectBox>h3
+{
+    margin: 0 auto 5px;
+    padding: 2% 0 0 3%;
+    font-size: 1.8rem;
+}
+
+.projectBox>h4
+{
+    margin: 0 auto 15px;
+    padding: 0 3%;
+}
+
+.projectBox>img
+{
+    display: block;
+    aspect-ratio: 1.3;
+    height: auto;
+    object-fit: cover;
+}
