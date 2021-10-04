@@ -113,7 +113,7 @@ p, li
     padding-top: 33.333333%;
 }
 
-@media (max-width: 960px) 
+@media (max-width: 1200px) 
 {
     .rowContent
     {
@@ -128,9 +128,12 @@ p, li
     transition: transform .2s;
 }
 
-.projectBox:hover
+@media (max-width: 1200px)
 {
-    transform: scale(1.03);
+    .projectBox:hover
+    {
+        transform: scale(1.03);
+    }
 }
 
 .projectBox>h3
