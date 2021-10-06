@@ -21,7 +21,6 @@ h1
 {
     font-size: 3rem;
     margin-bottom: 10px;
-    font-family: Garamond, serif;
 }
 
 h2
@@ -50,6 +49,60 @@ a
 #Wrapper
 {
     margin: auto;
+}
+
+#ConstructionBar
+{
+    background-image: url("./img/WarningHeader.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 100px 0; 
+}
+
+#ConstructionBar div
+{
+    background-color: black;
+    width: fit-content;
+    margin: auto;
+    padding: 50px 100px;
+}
+
+#ConstructionBar h1
+{
+    text-align: center;
+}
+
+#ProjectOverlay
+{
+    display: none;
+    position: fixed;
+    max-width: 1440px;
+    height: 60%;
+    left: 40px;
+    right: 40px;
+    top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: red;
+}
+
+#ProjectOverlay .row
+{
+    padding-top: 50px;
+}
+
+#ProjectOverlay .closeButton
+{
+    position: absolute;
+    right: 20px;
+}
+
+.projectRowContent
+{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #TopBar
@@ -91,7 +144,7 @@ a
 
 #WelcomeText
 {
-    position: absolute;
+    position: relative;
     top: 20%;
     left: 8%;
     width: fit-content;
@@ -115,7 +168,7 @@ a
 .rowContent
 {
     margin: auto;
-    padding: 10px 0 50px;
+    padding: 20px 0 20px;
     max-width: 1440px;
     display: flex;
     flex-wrap: wrap;
@@ -175,7 +228,6 @@ h4.centerTitle
 {
     .rowContent
     {
-        display: block;
     }
     .split_2, .split_3, .split_4
     {
@@ -184,6 +236,20 @@ h4.centerTitle
     .projectBox:hover
     {
         transform: scale(1);
+    }
+    .first
+    {
+        order: 0;
+    }
+
+    .second
+    {
+        order: 1;
+    }
+
+    .third
+    {
+        order: 2;
     }
 }
 
