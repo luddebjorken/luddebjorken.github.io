@@ -3,30 +3,56 @@
 <html>
 	<head>
 		<script>
-			function test()
+			function test(projectName)
 			{
-				window.alert("AAAAAAAAA");
+				switch(projectName)
+				{
+					case "Sparks":
+						window.open("https://www.youtube.com/watch?v=olqvr66N4e0", '_blank').focus();
+						return;
+					case "LastFarewell":
+						window.open("https://store.steampowered.com/app/1234240/Last_Farewell/", '_blank').focus();
+						return;
+					case "Steezy":
+						window.open("https://www.youtube.com/watch?v=06yZxxC6lMM", '_blank').focus();
+						return;
+					case "YouHerdMe":
+						window.open("https://www.youtube.com/watch?v=z2XbpAo627I", '_blank').focus();
+						return;
+				}
+			}
+			function closeProjectWindow()
+			{
+				//alert(document.getElementById("PopupPlayer").contentWindow)
+				//document.getElementById("PopupPlayer").contentWindow.postMessage(JSON.stringify({ event: 'command', func: 'playVideo',}, '*'));
+				//document.getElementById("ShadowWrapper").style.display = "none";
 			}
 		</script>
 	</head>
 	
 	<body>
-		<div id="ProjectOverlay">
-			<div class="row">
-				<div class="projectRowContent">
-					<p class="closeButton">X</p>
-					<div class="split_2" style="width: 25%; padding-right: 0;">
-						<h2>Project name</h2>
-						<h3>Developer</h3>
-						<p id="ProjectDescription">
-							A 1v4 party game where 4 play as puppets navigating a maze controlled by the 1 puppeteer, who can move around rooms, place traps and spawn enemies to stop the puppets from escaping.
-						</p>
-						<p>
-							Things I worked on: AI, pathfinding, tools, asset implementation (UI, animation, shaders).
-						</p>
-					</div>
-					<div class="split_2" style="width: 60%">
-						<img src="./img/Screenshot_Sparks.png" alt="Sparks gameplay screenshot">
+		<div id="ShadowWrapper">
+			<div id="ProjectWrapper">
+				<div id="ProjectOverlay" class="colorA">
+					<div class="row">
+						<div class="projectRowContent">
+							<p class="closeButton" onclick="closeProjectWindow()">X</p>
+							<div class="split_2 second">
+								<h2>Project name</h2>
+								<h3>Developer</h3>
+								<p id="ProjectDescription">
+									A 1v4 party game where four play as puppets navigating a maze controlled by the one puppeteer, who can move around rooms, place traps and spawn enemies to stop the puppets from escaping.
+								</p>
+								<p>
+									Things I worked on: AI, pathfinding, tools, asset implementation (UI, animation, shaders).
+								</p>
+							</div>
+							<div class="split_2 first">
+								<div class="videoWrapper">
+									<iframe id="PopupPlayer" width="100%" height="100%" src="https://www.youtube.com/embed/7KITVy4pkz0?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen sandbox="allow-scripts allow-same-origin allow-presentation"></iframe>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -34,7 +60,7 @@
 		<div id="Wrapper">
 			<div id="ConstructionBar">
 				<div>
-					<h1>Excuse the mess - this site is under construction</h1>
+					<h1>Pardon the mess - this site is under construction</h1>
 				</div>
 			</div>
 			<div id="TopBar" class="colorB">
@@ -43,31 +69,49 @@
 					<li><a href="#Proficiencies">PROFICIENCIES</a></li>
 					<li><a href="#Projects">PROJECTS</a></li>
 					<li><a href="#">CV</a></li>
-					<li><a href="#">CONTACT</a></li>
+					<li><a href="#Contact">CONTACT</a></li>
 				</ul>
 			</div>
 			<div id="WelcomeHeader">
 				<div id="WelcomeText">
-					<h1>THIS SITE IS A WIP</h1>
-					<h2>THIS SITE IS A WIP</h2>
+					<h1>Ludvig Björk Förare</h1>
+					<h2>Developer, designer</h2>
 				</div>
+				<img class="slide" src ="img/Slideshow/1.jpg">
+				<img class="slide" src ="img/Slideshow/2.png">
+				<img class="slide" src ="img/Slideshow/3.png">
+				<img class="slide" src ="img/Slideshow/4.png">
+				<script>
+					var slideIndex = 0;
+					showSlides();
+
+					function showSlides() {
+						var i;
+						var slides = document.getElementsByClassName("slide");
+						slideIndex++;
+						if (slideIndex >= slides.length) {slideIndex = 0}
+						document.getElementById("WelcomeHeader").style.backgroundImage = "url(" + slides[slideIndex].src + ")";
+						setTimeout(showSlides, 5000); // Change image every 2 seconds
+					}
+				</script>
 			</div>
 
 			<div id="Highlight" class="row colorA">
-				<h2 class="centerTitle">Hightlighted project</h2>
 				<div class="rowContent">
-					<div class="split_2">
+					<div class="split_2 thin">
 						<h2>Puppeteer</h2>
 						<h3>Developer</h3>
 						<p>
-							A 1v4 party game where 4 play as puppets navigating a maze controlled by the 1 puppeteer, who can move around rooms, place traps and spawn enemies to stop the puppets from escaping.
+							A 1v4 party game where four play as puppets navigating a maze controlled by the one puppeteer, who can move around rooms, place traps and spawn enemies to stop the puppets from escaping.
 						</p>
 						<p>
 							Things I worked on: AI, pathfinding, tools, asset implementation (UI, animation, shaders).
 						</p>
 					</div>
-					<div class="split_2">
-						<img src="./img/Screenshot_LastFarewell_TEMP.jpg">
+					<div class="split_2 wide">
+						<div class="videoWrapper">
+							<iframe width="100%" height="100%" src="https://www.youtube.com/embed/7KITVy4pkz0?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -75,11 +119,16 @@
 			<div id="About" class="row colorB">
 				<div class="rowContent">
 					<div class="split_2 second">
-						<img src="./img/TEST.JPG" alt="Picture of me">
+						<img src="./img/Me.png" alt="Picture of me">
 					</div>
 					<div class="split_2 first">
 						<h2>A little about me</h2>
-						<p></p>
+						<p>
+							I'm a developer/UX designer currently studying in Skellefteå who loves creating digital experiences. I've studied three years of <i>Computer Game Programming</i> at LTU and am currently in my second year of <i>Game and UX Design</i> at Futuregames.
+						</p>
+						<p>
+							My main strengths are my wide programming knowledge, my problem solving skills and my undending interest to learn. I also have decent level knowledge of multiple diciplines, most notably: modelling, 2D art, animation and project management.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -98,12 +147,20 @@
 					</div>
 					<div class="split_3">
 						<h4 class ="centerTitle">Software</h4>
-						<li>Unity</li>
-						<li>Unreal Engine</li>
-						<li>Blender</li>
+						<ul>
+							<li>Unity</li>
+							<li>Unreal Engine</li>
+							<li>Blender</li>
+							<li>Photoshop</li>
+						</ul>
 					</div>
 					<div class="split_3">
-						<h4 class ="centerTitle">Something else</h4>
+						<h4 class ="centerTitle">Others</h4>
+						<ul>
+							<li>Modelling</li>
+							<li>Animation</li>
+							<li>Project management</li>
+						</ul>
 						
 					</div>
 				</div>
@@ -123,23 +180,31 @@
 						<div class="projectBox colorA" onclick="test('LastFarewell')">
 							<h3>Last farewell - Flat Tail Studios</h3>
 							<h4>Developer</h4>
-							<img src="./img/Screenshot_LastFarewell_TEMP.jpg">
+							<img src="./img/Screenshot_LastFarewell_TEMP.jpg" alt=" Last Farewell gameplay screenshot">
 						</div>
 					</div>
 					<div class="split_2">
 						<div class="projectBox colorA" onclick="test('Steezy')">
 							<h3>Steezy</h3>
-							<h4>Designer | Developer</h4>
-							<img src="./img/Screenshot_Sparks.png" alt="Sparks gameplay screenshot">
+							<h4>Designer | Artist</h4>
+							<img src="./img/Screenshot_Steezy.png" alt="Steezy gameplay screenshot">
 						</div>
 					</div>
 					<div class="split_2">
 						<div class="projectBox colorA" onclick="test('YouHerdMe')">
 							<h3>You herd me</h3>
-							<h4>Designer | Developer</h4>
-							<img src="./img/Screenshot_Sparks.png" alt="Sparks gameplay screenshot">
+							<h4>Designer | Artist</h4>
+							<img src="./img/Screenshot_YouHerdMe.png" alt="You Herd Me gameplay screenshot">
 						</div>
 					</div>
+				</div>
+			</div>
+
+			<div id="Contact" class="row colorA">
+				<h2 class ="centerTitle">Contact me</h2>
+				<div class="rowContent">
+					<h3 style="margin: auto;">luddebf@gmail.com</h3>
+					
 				</div>
 			</div>
 
